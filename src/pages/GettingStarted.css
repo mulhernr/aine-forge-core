@@ -1,0 +1,149 @@
+.getting-started-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.getting-started-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.getting-started-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.getting-started-intro {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.getting-started-section {
+  margin-bottom: 3rem;
+}
+
+.getting-started-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Scenario Grid */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.scenario-card {
+  background: linear-gradient(135deg, var(--surface-color) 0%, var(--card-bg) 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.scenario-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+}
+
+.scenario-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.scenario-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.scenario-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Commands Card */
+.commands-card {
+  background: var(--surface-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.command-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.command-item:last-child {
+  border-bottom: none;
+}
+
+.command-item code {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+.command-item span {
+  color: var(--text-muted);
+}
+
+/* Structure Card */
+.structure-card {
+  background: var(--surface-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.structure-card pre {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .getting-started-page {
+    padding: 1rem;
+  }
+
+  .getting-started-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .command-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .command-item code {
+    min-width: auto;
+  }
+}

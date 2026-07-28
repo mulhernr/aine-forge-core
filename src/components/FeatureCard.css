@@ -1,14 +1,15 @@
 .feature-card {
-  background-color: var(--surface-color);
+  background: linear-gradient(135deg, var(--surface-color) 0%, var(--card-bg) 100%);
   border-radius: 12px;
   padding: 1.5rem;
   border: 1px solid var(--border-color);
-  transition: transform 0.2s, border-color 0.2s;
+  transition: all 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-4px);
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.25);
 }
 
 .feature-icon {
@@ -20,6 +21,7 @@
 .feature-title {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 .feature-description {

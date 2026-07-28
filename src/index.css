@@ -1,14 +1,25 @@
 :root {
-  --primary-color: #646cff;
-  --primary-hover: #535bf2;
-  --background-color: #242424;
-  --surface-color: #1a1a1a;
-  --text-color: rgba(255, 255, 255, 0.87);
-  --text-muted: rgba(255, 255, 255, 0.6);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --success-color: #4caf50;
-  --warning-color: #ff9800;
-  --error-color: #f44336;
+  /* Fun, vibrant color palette */
+  --primary-color: #6366f1;      /* Indigo */
+  --primary-hover: #4f46e5;
+  --secondary-color: #ec4899;    /* Pink */
+  --accent-color: #8b5cf6;       /* Purple */
+  --success-color: #10b981;      /* Emerald */
+  --warning-color: #f59e0b;      /* Amber */
+  --error-color: #ef4444;        /* Red */
+  
+  /* Background colors - lighter, more inviting */
+  --background-color: #1e1b4b;   /* Deep indigo */
+  --surface-color: #312e81;      /* Indigo surface */
+  --card-bg: #3730a3;            /* Card background */
+  --navbar-bg: #1e1b4b;          /* Navbar background */
+  
+  /* Text colors */
+  --text-color: #f8fafc;         /* Bright white */
+  --text-muted: #c7d2fe;         /* Light indigo */
+  
+  /* Border */
+  --border-color: rgba(139, 92, 246, 0.3);  /* Purple tint */
 }
 
 * {
@@ -22,7 +33,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background: linear-gradient(135deg, var(--background-color) 0%, #0f172a 100%);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,10 +48,11 @@ body {
 a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--primary-hover);
+  color: var(--accent-color);
 }
 
 button {
@@ -50,19 +62,21 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--surface-color);
-  color: var(--text-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
 }
 
 button:hover {
-  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto var(--primary-color);
+  outline: 4px auto var(--accent-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -71,4 +85,22 @@ h1, h2, h3, h4, h5, h6 {
 
 ul {
   list-style-position: inside;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
 }
