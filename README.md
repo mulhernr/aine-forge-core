@@ -4,9 +4,6 @@ A TypeScript/React application designed as a testing ground for agentic coding t
 
 [![CI and Deploy](https://github.com/royceacho-wwt/aine-forge-tester/actions/workflows/ci.yml/badge.svg)](https://github.com/royceacho-wwt/aine-forge-tester/actions/workflows/ci.yml)
 
-## 🚀 Live Demo
-
-Visit the deployed application: [https://royceacho-wwt.github.io/aine-forge-tester/](https://royceacho-wwt.github.io/aine-forge-tester/)
 
 ## 📋 Overview
 
