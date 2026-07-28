@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/aine-forge-tester/">
       <div className="app">
         <Navbar />
         
