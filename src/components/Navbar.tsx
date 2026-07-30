@@ -22,6 +22,12 @@ function Navbar() {
           >
             📚 Getting Started
           </NavLink>
+          <NavLink 
+            to="/health" 
+            className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+          >
+            💚 Health Check
+          </NavLink>
         </div>
       </div>
     </nav>

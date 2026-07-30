@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import GettingStarted from './pages/GettingStarted'
+import HealthCheckPage from './pages/HealthCheckPage'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/getting-started" element={<GettingStarted />} />
+          <Route path="/health" element={<HealthCheckPage />} />
         </Routes>
 
         <footer className="footer">
