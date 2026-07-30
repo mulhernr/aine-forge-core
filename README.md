@@ -130,3 +130,11 @@ VITE_API_URL=http://localhost:3000
 ## 📄 License
 
 MIT
+
+---
+
+## 😄 A Joke for You
+
+Why do software engineers make terrible partners?
+
+Because they're always looking for a better solution, even when the current one is working perfectly fine! 💻
