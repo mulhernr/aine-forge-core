@@ -17,6 +17,12 @@ function Navbar() {
             🏠 Home
           </NavLink>
           <NavLink 
+            to="/dashboard" 
+            className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+          >
+            📊 Dashboard
+          </NavLink>
+          <NavLink 
             to="/getting-started" 
             className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
           >
