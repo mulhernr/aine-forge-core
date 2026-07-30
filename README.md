@@ -142,3 +142,11 @@ MIT
 Why do software engineers make terrible partners?
 
 Because they're always looking for a better solution, even when the current one is working perfectly fine! 💻
+
+---
+
+## ✈️ One More for the Road
+
+Why did the AI refuse to book a flight to the cloud?
+
+Because it was already running there and didn't want to deal with the latency of physical travel! ☁️🤖
