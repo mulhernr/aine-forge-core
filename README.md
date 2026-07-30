@@ -16,6 +16,12 @@ This repository is set up as a foundation for testing agentic coding tools. It i
 - **GitHub Actions** - CI pipeline with automated testing and deployment
 - **GitHub Pages** - Automatic deployment on push to main
 
+## 😄 A Joke for You
+
+Why did the developer go broke?
+
+Because he used up all his cache! 💾
+
 ## 🛠️ Getting Started
 
 ### Prerequisites
@@ -40,7 +46,7 @@ npm run dev
 ### Available Scripts
 
 | Command | Description |
-|---------|-------------|
+|---------|-------------| 
 | `npm run dev` | Start development server |
 | `npm run build` | Build for production |
 | `npm run preview` | Preview production build |
