@@ -2,6 +2,7 @@
 // This is the second comment
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import GettingStarted from './pages/GettingStarted'
@@ -19,9 +20,7 @@ function App() {
           <Route path="/getting-started" element={<GettingStarted />} />
         </Routes>
 
-        <footer className="footer">
-          <p>Built for testing agentic coding tools 🛠️</p>
-        </footer>
+        <Footer />
       </div>
     </Router>
   )
