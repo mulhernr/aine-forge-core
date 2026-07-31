@@ -1,0 +1,24 @@
+.time-card {
+  color: white;
+  text-align: center;
+}
+
+.time-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.time-display {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+}
+
+.date-display {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
