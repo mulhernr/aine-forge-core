@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import GettingStarted from './pages/GettingStarted'
+import UserSetup from './pages/UserSetup'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/setup" element={<UserSetup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/getting-started" element={<GettingStarted />} />
         </Routes>

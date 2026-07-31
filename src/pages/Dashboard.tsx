@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import LocationCard from '../components/LocationCard'
 import TimeCard from '../components/TimeCard'
@@ -7,20 +8,37 @@ import TodoList from '../components/TodoList'
 import QuoteCard from '../components/QuoteCard'
 import './Dashboard.css'
 
+interface UserData {
+  name: string
+  city: string
+  country: string
+}
+
 function Dashboard() {
+  const navigate = useNavigate()
+  const [userData, setUserData] = useState<UserData | null>(null)
   const [location, setLocation] = useState<{ city: string; country: string } | null>(null)
   const [weather, setWeather] = useState<{ temp: number; condition: string; icon: string } | null>(null)
-  const [todos, setTodos] = useState<Array<{ id: number; text: string; completed: boolean }>>([
-    { id: 1, text: 'Review project requirements', completed: false },
-    { id: 2, text: 'Write unit tests', completed: true },
-    { id: 3, text: 'Update documentation', completed: false },
-  ])
+  const [todos, setTodos] = useState<Array<{ id: number; text: string; completed: boolean }>>(
+    JSON.parse(localStorage.getItem('todos') || 'null') || [
+      { id: 1, text: 'Review project requirements', completed: false },
+      { id: 2, text: 'Write unit tests', completed: true },
+      { id: 3, text: 'Update documentation', completed: false },
+    ]
+  )
 
-  // Simulate fetching location data
+  // Load user data from localStorage
   useEffect(() => {
-    // In a real app, this would use geolocation API
-    setLocation({ city: 'San Francisco', country: 'USA' })
-  }, [])
+    const savedUserData = localStorage.getItem('userData')
+    if (savedUserData) {
+      const parsedData = JSON.parse(savedUserData)
+      setUserData(parsedData)
+      setLocation({ city: parsedData.city, country: parsedData.country })
+    } else {
+      // If no user data, redirect to setup
+      navigate('/setup')
+    }
+  }, [navigate])
 
   // Simulate fetching weather data
   useEffect(() => {
@@ -33,6 +51,11 @@ function Dashboard() {
     ]
     setWeather(weatherData[Math.floor(Math.random() * weatherData.length)])
   }, [])
+
+  // Save todos to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   const addTodo = (text: string) => {
     const newTodo = {
@@ -53,10 +76,14 @@ function Dashboard() {
     setTodos(todos.filter(todo => todo.id !== id))
   }
 
+  if (!userData) {
+    return null
+  }
+
   return (
     <>
       <Header 
-        title="Personal Dashboard" 
+        title={`Welcome, ${userData.name}!`}
         subtitle="Your daily overview at a glance"
       />
       

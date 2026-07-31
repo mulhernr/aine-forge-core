@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import FeatureCard from '../components/FeatureCard'
 import Counter from '../components/Counter'
@@ -40,6 +41,19 @@ function Home() {
       />
       
       <main className="main-content">
+        <section className="cta-section">
+          <div className="cta-card">
+            <h2>🎯 Get Started with Your Dashboard</h2>
+            <p>
+              Create a personalized dashboard with your location and weather information. 
+              Set up your profile in just a few seconds!
+            </p>
+            <Link to="/setup" className="cta-button">
+              Create Your Dashboard
+            </Link>
+          </div>
+        </section>
+
         <section className="features-section">
           <h2>✨ Features</h2>
           <div className="features-grid">
