@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import LocationCard from '../components/LocationCard'
+import TimeCard from '../components/TimeCard'
 import WeatherCard from '../components/WeatherCard'
 import TodoList from '../components/TodoList'
 import QuoteCard from '../components/QuoteCard'
@@ -9,7 +10,7 @@ import './Dashboard.css'
 function Dashboard() {
   const [location, setLocation] = useState<{ city: string; country: string } | null>(null)
   const [weather, setWeather] = useState<{ temp: number; condition: string; icon: string } | null>(null)
-  const [todos, setTodos] = useState<Array<{ id: number; text: string; completed: boolean }>>([
+  const [todos, setTodos] = useState<Array<{ id: number; text: string; completed: boolean }>([
     { id: 1, text: 'Review project requirements', completed: false },
     { id: 2, text: 'Write unit tests', completed: true },
     { id: 3, text: 'Update documentation', completed: false },
@@ -63,6 +64,10 @@ function Dashboard() {
         <div className="dashboard-grid">
           <div className="dashboard-card location-card-wrapper">
             {location && <LocationCard city={location.city} country={location.country} />}
+          </div>
+
+          <div className="dashboard-card time-card-wrapper">
+            <TimeCard />
           </div>
 
           <div className="dashboard-card weather-card-wrapper">
