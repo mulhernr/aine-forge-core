@@ -10,7 +10,7 @@ import './Dashboard.css'
 function Dashboard() {
   const [location, setLocation] = useState<{ city: string; country: string } | null>(null)
   const [weather, setWeather] = useState<{ temp: number; condition: string; icon: string } | null>(null)
-  const [todos, setTodos] = useState<Array<{ id: number; text: string; completed: boolean }>([
+  const [todos, setTodos] = useState<Array<{ id: number; text: string; completed: boolean }>>([
     { id: 1, text: 'Review project requirements', completed: false },
     { id: 2, text: 'Write unit tests', completed: true },
     { id: 3, text: 'Update documentation', completed: false },

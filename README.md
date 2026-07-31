@@ -18,7 +18,7 @@ This repository is set up as a foundation for testing agentic coding tools. It i
 
 ## 😄 A Joke for Our AI Overlords
 
-Why do agentic coding tools never get tired? Because they don't need to `sleep()` — they just `await` the next task! 🤖
+Why did the AI go to school? Because it wanted to improve its learning model! 🤖
 
 ## 🛠️ Getting Started
 
@@ -158,3 +158,11 @@ Because it was already running there and didn't want to deal with the latency of
 What did the agentic coding tool say when it finished the task early?
 
 "I guess you could say I really `git` the job done!" 🚀
+
+---
+
+## 🤣 One Final Joke
+
+How many developers does it take to change a light bulb?
+
+None, that's a hardware problem! 💡
